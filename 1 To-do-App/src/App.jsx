@@ -3,15 +3,17 @@ import AppTodo from "./Components/AppTodo";
 import Todo1 from "./Components/Todo1";
 import Todo2 from "./Components/Todo2";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./AppStyle.css";
 function App() {
   return (
     <>
       <center className="todo-container">
         <AppName />
         <AppTodo />
-        <Todo1 />
-        <Todo2 />
+        <div className="text-left">
+          <Todo1 />
+          <Todo2 />
+        </div>
       </center>
     </>
   );

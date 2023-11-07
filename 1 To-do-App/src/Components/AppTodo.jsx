@@ -9,7 +9,7 @@ function AppTodo() {
           <input type="date" name="" id="" />
         </div>
         <div class="col-sm-2">
-          <button type="button" class="btn btn-success">
+          <button type="button" class="btn btn-success btn-add">
             Add
           </button>
         </div>
