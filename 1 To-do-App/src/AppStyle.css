@@ -1,35 +1,15 @@
-.btn-delete {
-  margin: 10px 5px;
+.container .row {
+  text-align: start;
 }
-
-.btn-add {
-  margin: 10px 5px;
+.btn {
+  margin: 0px 5px 10px 0;
+  min-width: 75px;
+  text-align: center;
 }
 
 .row {
   margin-top: 10px;
 }
-
-h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
 input {
   width: 100%;
-}
-
-.text-left {
-  text-align: start;
-}
-
-.btn {
-  text-align: center;
-  min-width: 75px;
-  margin-top: 0;
-}
-
-.btn-add {
-  margin-top: 0;
 }

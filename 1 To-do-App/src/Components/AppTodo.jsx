@@ -1,15 +1,15 @@
 function AppTodo() {
   return (
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-sm-6">
-          <input type="text" placeholder="Enter Todo her" />
+    <div className="container text-center">
+      <div className="row">
+        <div className="col-sm-6">
+          <input type="text" placeholder="Enter Todo here" />
         </div>
-        <div class="col-sm-4">
+        <div className="col-sm-4">
           <input type="date" name="" id="" />
         </div>
-        <div class="col-sm-2">
-          <button type="button" class="btn btn-success btn-add">
+        <div className="col-sm-2">
+          <button type="button" className="btn btn-success btn-add">
             Add
           </button>
         </div>
