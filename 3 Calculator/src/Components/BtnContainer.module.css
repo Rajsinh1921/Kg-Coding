@@ -1,0 +1,7 @@
+.BtnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
