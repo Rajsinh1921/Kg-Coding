@@ -1,5 +1,7 @@
+import style from "./Heading.module.css";
+
 const Heading = () => {
-  return <h2>Helthy Foods</h2>;
+  return <h2 className={style.heading}>Helthy Foods</h2>;
 };
 
 export default Heading;

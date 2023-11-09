@@ -1,0 +1,8 @@
+.kgSpan {
+  color: lightcoral;
+}
+.kgButton {
+  float: right;
+  background-color: rgba(103, 255, 103, 0.548);
+  border-radius: 25%;
+}
