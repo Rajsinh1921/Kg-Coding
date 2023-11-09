@@ -1,8 +1,11 @@
 .kgSpan {
   color: lightcoral;
 }
+.kgSpan:hover {
+  background-color: #d8d8db;
+}
 .kgButton {
   float: right;
   background-color: rgba(103, 255, 103, 0.548);
-  border-radius: 25%;
+  border-radius: 5px;
 }

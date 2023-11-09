@@ -1,19 +1,10 @@
 import style from "./Item.module.css";
-import FoodItems from "./FoodItems";
 
-const Item = ({ foodItems }) => {
-  const itemBought = (event) => {
-    console.log(event);
-    console.log(`${foodItems} is being bought`);
-  };
-
+const Item = ({ foodItems, bought, handleBuyButton }) => {
   return (
-    <li className={`list-group-item`}>
+    <li className={`list-group-item ${style["kgSpan"]} ${bought && "active"}`}>
       <span className={style["kgSpan"]}>{foodItems}</span>
-      <button
-        className={style["kgButton"]}
-        onClick={(event) => itemBought(event)}
-      >
+      <button className={style["kgButton"]} onClick={handleBuyButton}>
         Buy
       </button>
     </li>
