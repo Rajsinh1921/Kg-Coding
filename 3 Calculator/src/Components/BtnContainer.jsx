@@ -1,7 +1,7 @@
 import Btn from "./Btn";
 import style from "./BtnContainer.module.css";
 
-function BtnContainer() {
+function BtnContainer({ onBtn }) {
   const btnElements = [
     "C",
     "1",
@@ -25,7 +25,7 @@ function BtnContainer() {
   return (
     <div className={style.BtnContainer}>
       {btnElements.map((item, index) => (
-        <Btn key={index} item={item} />
+        <Btn key={index} item={item} handleClick={() => onBtn(item)} />
       ))}
     </div>
   );

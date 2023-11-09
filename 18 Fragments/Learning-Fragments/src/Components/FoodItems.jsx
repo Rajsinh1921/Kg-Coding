@@ -4,8 +4,6 @@ import { useState } from "react";
 const FoodItems = ({ items }) => {
   const [activeItem, setActiveItem] = useState([]);
 
-  console.log(items);
-
   let onBuyButton = (item) => {
     setActiveItem([...activeItem, item]);
   };
