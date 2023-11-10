@@ -1,31 +1,38 @@
-import AppName from "./Components/AppName";
-import AppTodo from "./Components/AppTodo";
+import AddName from "./Components/AddName";
+import AddTodo from "./Components/AddTodo";
+import ErrorMessage from "./Components/ErrorMessage";
 import TodoItems from "./Components/TodoItems";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AppStyle.css";
+import { useState } from "react";
+
 function App() {
-  const todoItems = [
-    {
-      name: "Buy milk",
-      duedate: "4/10/2023",
-    },
-    {
-      name: "Go to College",
-      duedate: "12/11/2023",
-    },
-    {
-      name: "Go to doctors",
-      duedate: "04/11/2023",
-    },
-  ];
+  const [todoItems, setTodoItems] = useState([]);
+
+  const addTodoItems = (itemName, dueDate) => {
+    setTodoItems([
+      ...todoItems,
+      {
+        id: todoItems.length + 1,
+        name: itemName,
+        duedate: dueDate,
+      },
+    ]);
+  };
+
+  const deleteTodoItems = (id) => {
+    const filteredList = todoItems.filter((item) => item.id !== id);
+    setTodoItems(filteredList);
+  };
 
   return (
     <>
       <center className="todo-container">
-        <AppName />
-        <AppTodo />
+        <AddName />
+        <AddTodo onNewItem={addTodoItems} />
+        {todoItems.length === 0 && <ErrorMessage />}
         <div className="text-left">
-          <TodoItems todoItem={todoItems} />
+          <TodoItems todoItem={todoItems} onClickDelete={deleteTodoItems} />
         </div>
       </center>
     </>
