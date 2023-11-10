@@ -12,15 +12,17 @@ function AddTodo({ onNewItem }) {
     setInputDueDate(event.target.value);
   };
 
-  const handleOnButtonClick = () => {
+  const handleOnButtonClick = (event) => {
+    event.preventDefault();
     onNewItem(inputname, inputDueDate);
+
     setInputname("");
     setInputDueDate("");
   };
 
   return (
     <div className="container text-center">
-      <div className="row">
+      <form className="row" onSubmit={handleOnButtonClick}>
         <div className="col-sm-6">
           <input
             type="text"
@@ -37,15 +39,11 @@ function AddTodo({ onNewItem }) {
           />
         </div>
         <div className="col-sm-2">
-          <button
-            onClick={handleOnButtonClick}
-            type="button"
-            className="btn btn-success btn-add"
-          >
+          <button className="btn btn-success btn-add">
             <BiMessageAltAdd />
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
