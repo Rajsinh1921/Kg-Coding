@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BiMessageAltAdd } from "react-icons/bi";
 
 function AddTodo({ onNewItem }) {
   const [inputname, setInputname] = useState("");
@@ -41,7 +42,7 @@ function AddTodo({ onNewItem }) {
             type="button"
             className="btn btn-success btn-add"
           >
-            Add
+            <BiMessageAltAdd />
           </button>
         </div>
       </div>
