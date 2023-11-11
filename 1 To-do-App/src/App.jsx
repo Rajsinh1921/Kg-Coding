@@ -10,14 +10,17 @@ function App() {
   const [todoItems, setTodoItems] = useState([]);
 
   const addTodoItems = (itemName, dueDate) => {
-    setTodoItems([
-      ...todoItems,
-      {
-        id: todoItems.length + 1,
-        name: itemName,
-        duedate: dueDate,
-      },
-    ]);
+    setTodoItems((current) => {
+      console.log(current);
+      return [
+        ...current,
+        {
+          id: todoItems.length + 1,
+          name: itemName,
+          duedate: dueDate,
+        },
+      ];
+    });
   };
 
   const deleteTodoItems = (id) => {
@@ -31,9 +34,7 @@ function App() {
         <AddName />
         <AddTodo onNewItem={addTodoItems} />
         {todoItems.length === 0 && <ErrorMessage />}
-        <div className="text-left">
-          <TodoItems todoItem={todoItems} onClickDelete={deleteTodoItems} />
-        </div>
+        <TodoItems todoItem={todoItems} onClickDelete={deleteTodoItems} />
       </center>
     </>
   );
