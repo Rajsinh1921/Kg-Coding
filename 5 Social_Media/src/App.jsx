@@ -10,11 +10,12 @@ import Slidebar from "./Components/Sidebar";
 function App() {
   return (
     <>
-      <Header />
       <Slidebar />
-      <Postlists />
-      <Card />
-      <Form />
+      <Header />
+      <div className="container">
+        <Postlists />
+        <Form />
+      </div>
       <Footer />
     </>
   );

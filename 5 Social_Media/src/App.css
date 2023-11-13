@@ -1,0 +1,12 @@
+.sideBar {
+  height: 100vh;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+}
+
+.header {
+  display: flex;
+}

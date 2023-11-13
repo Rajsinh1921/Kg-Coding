@@ -2,32 +2,32 @@ import React from "react";
 
 function Sidebar() {
   return (
-    <div class="flex-shrink-0 p-3" style={{ width: `280px` }}>
+    <div className="flex-shrink-0 p-3 sideBar" style={{ width: `280px` }}>
       <a
         href="/"
-        class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
+        className="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
       >
-        <svg class="bi pe-none me-2" width="30" height="24">
-          <use xlink:href="#bootstrap"></use>
+        <svg className="bi pe-none me-2" width="30" height="24">
+          <use xlinkHref="#bootstrap"></use>
         </svg>
-        <span class="fs-5 fw-semibold">Collapsible</span>
+        <span className="fs-5 fw-semibold">Collapsible</span>
       </a>
-      <ul class="list-unstyled ps-0">
-        <li class="mb-1">
+      <ul className="list-unstyled ps-0">
+        <li className="mb-1">
           <button
-            class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0"
             data-bs-toggle="collapse"
             data-bs-target="#home-collapse"
             aria-expanded="true"
           >
             Home
           </button>
-          <div class="collapse show" id="home-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <div className="collapse show" id="home-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Overview
                 </a>
@@ -35,7 +35,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Updates
                 </a>
@@ -43,7 +43,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Reports
                 </a>
@@ -51,21 +51,21 @@ function Sidebar() {
             </ul>
           </div>
         </li>
-        <li class="mb-1">
+        <li className="mb-1">
           <button
-            class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#dashboard-collapse"
             aria-expanded="false"
           >
             Dashboard
           </button>
-          <div class="collapse" id="dashboard-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <div className="collapse" id="dashboard-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Overview
                 </a>
@@ -73,7 +73,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Weekly
                 </a>
@@ -81,7 +81,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Monthly
                 </a>
@@ -89,7 +89,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Annually
                 </a>
@@ -97,21 +97,21 @@ function Sidebar() {
             </ul>
           </div>
         </li>
-        <li class="mb-1">
+        <li className="mb-1">
           <button
-            class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0"
             data-bs-toggle="collapse"
             data-bs-target="#orders-collapse"
             aria-expanded="true"
           >
             Orders
           </button>
-          <div class="collapse show" id="orders-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <div className="collapse show" id="orders-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   New
                 </a>
@@ -119,7 +119,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Processed
                 </a>
@@ -127,7 +127,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Shipped
                 </a>
@@ -135,7 +135,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Returned
                 </a>
@@ -143,22 +143,22 @@ function Sidebar() {
             </ul>
           </div>
         </li>
-        <li class="border-top my-3"></li>
-        <li class="mb-1">
+        <li className="border-top my-3"></li>
+        <li className="mb-1">
           <button
-            class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#account-collapse"
             aria-expanded="false"
           >
             Account
           </button>
-          <div class="collapse" id="account-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <div className="collapse" id="account-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   New...
                 </a>
@@ -166,7 +166,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Profile
                 </a>
@@ -174,7 +174,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Settings
                 </a>
@@ -182,7 +182,7 @@ function Sidebar() {
               <li>
                 <a
                   href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 >
                   Sign out
                 </a>
