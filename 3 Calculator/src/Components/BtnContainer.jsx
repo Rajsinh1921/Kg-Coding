@@ -1,7 +1,11 @@
 import Btn from "./Btn";
+import DisplayContext from "../Storage/DisplayContext";
 import style from "./BtnContainer.module.css";
+import React from "react";
+import { useContext } from "react";
 
-function BtnContainer({ onBtn }) {
+function BtnContainer() {
+  const { onBtn } = useContext(DisplayContext);
   const btnElements = [
     "C",
     "1",

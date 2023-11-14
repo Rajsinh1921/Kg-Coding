@@ -1,6 +1,8 @@
 #calculator {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   min-width: 300px;
   width: 35%;
@@ -8,4 +10,9 @@
   min-height: 500px;
   margin: 20px;
   border: 4px solid black;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
 }
