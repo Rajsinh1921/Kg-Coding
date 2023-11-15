@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "./Card";
+import { PostListContext } from "../ContextAPI/post-list-store";
 
 function Postlists() {
+  const { postList } = useContext(PostListContext);
   return (
     <>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {postList.map((post, index) => (
+        <Card key={index} post={post} />
+      ))}
     </>
   );
 }

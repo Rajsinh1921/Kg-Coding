@@ -1,196 +1,95 @@
 import React from "react";
 
-function Sidebar() {
+function Sidebar({ handleSidebarClick, selectedTab }) {
   return (
-    <div className="flex-shrink-0 p-3 sideBar" style={{ width: `280px` }}>
+    <div
+      className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
+      style={{ width: `280px` }}
+    >
       <a
         href="/"
-        className="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
+        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
       >
-        <svg className="bi pe-none me-2" width="30" height="24">
+        <svg className="bi pe-none me-2" width="40" height="32">
           <use xlinkHref="#bootstrap"></use>
         </svg>
-        <span className="fs-5 fw-semibold">Collapsible</span>
+        <span className="fs-4">Sidebar</span>
       </a>
-      <ul className="list-unstyled ps-0">
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0"
-            data-bs-toggle="collapse"
-            data-bs-target="#home-collapse"
-            aria-expanded="true"
+      <hr />
+      <ul className="nav nav-pills flex-column mb-auto">
+        <li className="nav-item">
+          <a
+            href="#"
+            className={`nav-link text-white ${
+              selectedTab === "home" ? `active` : ``
+            }`}
+            aria-current="page"
+            onClick={() => handleSidebarClick("home")}
           >
+            <svg className="bi pe-none me-2" width="16" height="16">
+              <use xlinkHref="#home"></use>
+            </svg>
             Home
-          </button>
-          <div className="collapse show" id="home-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Overview
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Updates
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Reports
-                </a>
-              </li>
-            </ul>
-          </div>
+          </a>
         </li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#dashboard-collapse"
-            aria-expanded="false"
+        <li>
+          <a
+            href="#"
+            className={`nav-link text-white ${
+              selectedTab === "create post" ? `active` : ``
+            }`}
+            onClick={() => handleSidebarClick("create post")}
           >
-            Dashboard
-          </button>
-          <div className="collapse" id="dashboard-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Overview
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Weekly
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Monthly
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Annually
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0"
-            data-bs-toggle="collapse"
-            data-bs-target="#orders-collapse"
-            aria-expanded="true"
-          >
-            Orders
-          </button>
-          <div className="collapse show" id="orders-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  New
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Processed
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Shipped
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Returned
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="border-top my-3"></li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#account-collapse"
-            aria-expanded="false"
-          >
-            Account
-          </button>
-          <div className="collapse" id="account-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  New...
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Profile
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Settings
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                >
-                  Sign out
-                </a>
-              </li>
-            </ul>
-          </div>
+            <svg className="bi pe-none me-2" width="16" height="16">
+              <use xlinkHref="#speedometer2"></use>
+            </svg>
+            Create Post
+          </a>
         </li>
       </ul>
+      <hr />
+      <div className="dropdown">
+        <a
+          href="#"
+          className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="https://github.com/mdo.png"
+            alt=""
+            width="32"
+            height="32"
+            className="rounded-circle me-2"
+          />
+          <strong>mdo</strong>
+        </a>
+        <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li>
+            <a className="dropdown-item" href="#">
+              New project...
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Settings
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Profile
+            </a>
+          </li>
+          <li>
+            <hr className="dropdown-divider" />
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Sign out
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
