@@ -28,3 +28,17 @@
 .reaction {
   margin-top: 15px;
 }
+
+.create-post {
+  margin-left: 20px;
+  margin-top: 50px;
+  width: 80%;
+}
+
+.Welcomemessage {
+  margin-top: 50px;
+}
+
+.loading-Spinner {
+  margin: 10%;
+}

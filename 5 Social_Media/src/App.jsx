@@ -2,7 +2,7 @@ import PostListProvider from "./ContextAPI/post-list-store";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/Footer";
-import Form from "./Components/Form";
+import CreatePosts from "./Components/CreatePosts";
 import Header from "./Components/Header";
 import Postlists from "./Components/Postlists";
 import Slidebar from "./Components/Sidebar";
@@ -11,9 +11,7 @@ import { useState } from "react";
 function App() {
   const [selectedTab, setSelectedTab] = useState("home");
 
-  const handleSidebarClick = (state) => {
-    return setSelectedTab(state);
-  };
+  const handleSidebarClick = (state) => setSelectedTab(state);
 
   return (
     <PostListProvider>
@@ -24,7 +22,7 @@ function App() {
         />
         <div className="righthandContainer">
           <Header />
-          {selectedTab === "home" ? <Form /> : <Postlists />}
+          {selectedTab === "home" ? <Postlists /> : <CreatePosts />}
           <Footer />
         </div>
       </div>
