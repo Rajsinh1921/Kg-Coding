@@ -1,19 +1,22 @@
 import React from "react";
 import { FaShoppingBag, FaRegHeart } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Header() {
+  const bag = useSelector((store) => store.bag);
   return (
     <>
       <header>
         <div className="logo_container">
-          <a href="#">
+          <Link to="/">
             <img
               className="myntra_home"
               src="images/myntra_logo.webp"
               alt="Myntra Home"
             />
-          </a>
+          </Link>
         </div>
         <nav className="nav_bar">
           <a href="#">Men</a>
@@ -43,11 +46,11 @@ function Header() {
             Wishlist
           </div>
 
-          <a className="action_container" href="pages/bag.html">
+          <Link to="/bag" className="action_container">
             <FaShoppingBag style={{ fontSize: "20px" }} />
             Bag
-            <span className="bag-item-count">0</span>
-          </a>
+            <span className="bag-item-count">{bag.length}</span>
+          </Link>
         </div>
       </header>
     </>

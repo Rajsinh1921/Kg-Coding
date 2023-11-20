@@ -1,6 +1,20 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { bagActions } from "../Store/Bag";
+import { GrAddCircle } from "react-icons/gr";
+import { AiFillDelete } from "react-icons/ai";
 
 function HomeItem({ item }) {
+  const dispatchItem = useDispatch();
+  const bagItems = useSelector((store) => store.bag);
+  const elementFound = bagItems.indexOf(item.id) >= 0;
+  const handleAddToBag = () => {
+    dispatchItem(bagActions.addTObag(item.id));
+  };
+  const handleRemove = () => {
+    dispatchItem(bagActions.removeFromBag(item.id));
+  };
+
   return (
     <>
       <div className="item-container">
@@ -15,12 +29,24 @@ function HomeItem({ item }) {
           <span className="original-price">CAD {item.original_price}</span>
           <span className="discount">({item.discount_percentage}% OFF)</span>
         </div>
-        <button
-          className="btn-add-bag"
-          onClick={() => console.log(`Item added`)}
-        >
-          Add to Bag
-        </button>
+        {elementFound ? (
+          <button
+            type="button"
+            className="btn-add-bag btn btn-danger"
+            onClick={handleRemove}
+          >
+            <AiFillDelete />
+            Remove
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="btn-add-bag btn btn-success"
+            onClick={handleAddToBag}
+          >
+            <GrAddCircle /> Add to bag
+          </button>
+        )}
       </div>
     </>
   );
