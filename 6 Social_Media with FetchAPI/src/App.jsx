@@ -2,11 +2,10 @@ import PostListProvider from "./ContextAPI/post-list-store";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/Footer";
-import CreatePosts from "./Components/CreatePosts";
 import Header from "./Components/Header";
-import Postlists from "./Components/Postlists";
 import Slidebar from "./Components/Sidebar";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [selectedTab, setSelectedTab] = useState("home");
@@ -22,7 +21,7 @@ function App() {
         />
         <div className="righthandContainer">
           <Header />
-          {selectedTab === "home" ? <Postlists /> : <CreatePosts />}
+          <Outlet />
           <Footer />
         </div>
       </div>
